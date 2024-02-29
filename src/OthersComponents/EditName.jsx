@@ -6,11 +6,11 @@ function EditName({ userName, firstName, lastName, onUserNameChange }) {
     const handleChange = (event) => {
         const newUserName = event.target.value;
         setEditUserName(newUserName);
-        onUserNameChange(newUserName); // Appeler la fonction de rappel à chaque changement
+        onUserNameChange(newUserName);
     };
 
     return (
-        <form className='editNameForm'>
+        <form className='editNameForm'> 
             <div>
                 <label htmlFor="userNameInput" className='editNameLabel'>User name:</label>
                 <input

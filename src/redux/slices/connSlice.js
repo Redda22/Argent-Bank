@@ -22,8 +22,8 @@ export const login = createAsyncThunk(
       });
 
       if (!response.ok) {
-        const errorData = await response.json(); // Capturez les données d'erreur du serveur
-        throw new Error(errorData.message); // Lancez une erreur avec le message d'erreur du serveur
+        const errorData = await response.json();
+        throw new Error(errorData.message);
       }
 
       const data = await response.json();
