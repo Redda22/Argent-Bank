@@ -6,7 +6,6 @@ import { login } from '../redux/slices/connSlice';
 
 function SigninPage() {
   const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
-  const token = useSelector(state => state.auth.token);
   const error = useSelector(state => state.auth.error);
   const navigate = useNavigate();
 

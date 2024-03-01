@@ -2,6 +2,7 @@
 import iconchat from '../Assets/img/icon-chat.png';
 import iconmoney from '../Assets/img/icon-money.png';
 import iconsecurity from '../Assets/img/icon-security.png';
+import Feature from '../OthersComponents/Feature';
 
 function PrincipalPage() {
   return (
@@ -18,29 +19,21 @@ function PrincipalPage() {
         </div>
         <section className="features">
           <h2 className="sr-only">Features</h2>
-          <div className="feature-item">
-            <img src={iconchat} alt="Chat Icon" className="feature-icon" />
-            <h3 className="feature-item-title">You are our #1 priority</h3>
-            <p>
-              Need to talk to a representative? You can get in touch through our
-              24/7 chat or through a phone call in less than 5 minutes.
-            </p>
-          </div>
-          <div className="feature-item">
-            <img src={iconmoney} alt="Chat Icon" className="feature-icon" />
-            <h3 className="feature-item-title">More savings means higher rates</h3>
-            <p>
-              The more you save with us, the higher your interest rate will be!
-            </p>
-          </div>
-          <div className="feature-item">
-            <img src={iconsecurity} alt="Chat Icon" className="feature-icon" />
-            <h3 className="feature-item-title">Security you can trust</h3>
-            <p>
-              We use top of the line encryption to make sure your data and money
-              is always safe.
-            </p>
-          </div>
+          <Feature
+            logo={iconchat}
+            title={"You are our #1 priority"}
+            para={"Need to talk to a representative? You can get in touch through our 24/7 chat or through a phone call in less than 5 minutes."}
+          />
+          <Feature
+            logo={iconmoney}
+            title={"More savings means higher rates"}
+            para={"The more you save with us, the higher your interest rate will be!"}
+          />
+          <Feature
+            logo={iconsecurity}
+            title={"Security you can trust"}
+            para={"We use top of the line encryption to make sure your data and money is always safe."}
+          />
         </section>
       </main>
     </div>
