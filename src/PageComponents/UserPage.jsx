@@ -58,7 +58,7 @@ function UserPage() {
         setShowEditName(false);
       }
       else{
-        alert("Remplissez le champs");
+        alert("Remplissez ou changez champ userName");
       }
 
     }

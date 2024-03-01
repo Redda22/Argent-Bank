@@ -6,13 +6,11 @@ const initialState = {
   error: null,
 };
 
-
+// création d'une action asynchrone pour effectuer la connexion 
 export const login = createAsyncThunk(
   'user/login',
   async ({ email, password }, thunkAPI) => {
     try {
-
-      // Effectuer la requête API de connexion avec les informations récupérées
       const response = await fetch('http://localhost:3001/api/v1/user/login', {
         method: 'POST',
         headers: {
@@ -28,7 +26,7 @@ export const login = createAsyncThunk(
 
       const data = await response.json();
       return data.body.token;
-    } 
+    }
     
     catch (error) {
       return thunkAPI.rejectWithValue(error.message);
